@@ -7,7 +7,7 @@ const app = express.Router();
 
 
 app.get("/", function(req, res){
-    res.send(game);
+    res.send("text");
 })
 
 app.post('/players', (req, res) => {
