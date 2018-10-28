@@ -3,32 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "node": "node server/index.js",
+    "start": "node server/index.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
-
+  "homepage": "https://github.com/millad1/what-do-you-meme-fall-2018#readme",
   "dependencies": {
-    "homepage": "https://github.com/millad1/what-do-you-mean-fall-2018#readme",
     "axios": "^0.18.0",
-    "express": "^4.16.3",
     "bootstrap": "^4.1.3",
+    "express": "^4.16.3",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.4",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1"
   },
-
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.5",
-    "@vue/cli-plugin-eslint": "^3.0.5",
-    "@vue/cli-service": "^3.0.5",
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-plugin-eslint": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17"
   },
-
   "eslintConfig": {
     "root": true,
     "env": {
@@ -43,17 +40,14 @@
       "parser": "babel-eslint"
     }
   },
-
   "postcss": {
     "plugins": {
       "autoprefixer": {}
     }
   },
-
-  "browserslist":[
+  "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
   ]
 }
-

@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="en">
-  <head> 
-    <!-- Required meta tags -->   
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS --> 
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <title>Hello, world!</title>
   </head>
   <body>
-    
 
     <div class="container" id="app">
         <div class="row">
@@ -20,7 +20,7 @@
             </div>
             <div class="col">
                 <ul>
-                    <li v-for="player in players" @click="makeCurrent(player)">
+                    <li v-for="player in players" @click="makeCurrent(player)" >
                         {{player.name}}
                     </li>
                 </ul>
@@ -34,31 +34,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
     <script>
-        let size = 20;
-        $(function(){
-            $("h1").on("click", function(){
-                size += 20;
-                $(this).css({fontsize: size});
-            });
-        });
-
-        var person1 = {
-            name: "Moshe",
-            age: 41,
-            car: {
-                make: "Honda",
-                year: 2005
-            },
-            children: [ {name: "Binyamin"}, {name: "Rafi"} ]
-        };
-
         const v = new Vue({
             el: "#app",
             data: function(){
                 return {
-                    image: "https://media2.s-nbcnews.com/j/newscms/2018_38/2572721/180920-xi-putin-panckaes-mc-955_209ac42eeab009749defc9e8f3c6ee38.focal-580x290.JPG",
+                    image : "https://media2.s-nbcnews.com/j/newscms/2018_38/2572721/180920-xi-putin-panckaes-mc-955_209ac42eeab009749defc9e8f3c6ee38.focal-460x230.JPG",
                     players: [
                         {name: "Moshe"},
                         {name: "Faizan"},
@@ -75,5 +56,5 @@
             }
         });
     </script>
-</body>
+  </body>
 </html>
