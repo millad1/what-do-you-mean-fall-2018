@@ -16,7 +16,7 @@
         </div>
         <div class="col-md-4">
             <div class="card" >
-                <img class="card-img" src="" alt="Card image cap">
+                <img class="card-img" :src="state.picture.url" :alt="state.picture.name">
                 <a @click.prevent="flipPicture" class="btn btn-primary">Flip Picture</a>
 
             </div>
@@ -25,6 +25,11 @@
             <div class="card" >
                 <div class="card-body">
                     <h5 class="card-title">My Captions</h5>
+                    <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                    </ul>
+                </div>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
@@ -52,13 +57,18 @@ export default {
     data: function(){
         return {
             state: {
-                picture: ""
-            }
+                picture: "",
+                players: [],
+                myCaptions: [],
+            },
+                playedCaptions: [],
         }
     },
     created: function(){
         GetState()
         .then(x=> this.state = x)
+        GetMyCaptions()
+        .then(x=> this.myCaptions = x)
     },
     methods: {
         flipPicture: function(){
